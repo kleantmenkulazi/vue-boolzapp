@@ -134,3 +134,98 @@ chat
 .msgDelete {
     display: none;
 }
+
+/* Nuvolette chat */
+.talk-bubble {
+    display: inline-block;
+    position: relative;
+    min-width: auto;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sent {
+    background-color: #FFFFFF;
+    margin-left: 40px;
+}
+
+.received {
+    background-color: #D5F9BA;
+    margin-right: 40px;
+}
+
+.round {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.talktext {
+    padding: 0.5rem 1rem 0.2rem 0.8rem;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.h {
+    text-align: right;
+    font-size: small;
+    color: rgb(175, 175, 175);
+}
+
+.talktext p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+/* Ricevuto */
+
+.tri-left.border.left-top:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: auto;
+    left: -40px;
+    top: -8px;
+    bottom: auto;
+    border-color: #FFFFFF transparent transparent transparent;
+}
+
+.tri-right.right-top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: auto;
+    left: -20px;
+    top: 0px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: #FFFFFF transparent transparent transparent;
+}
+
+/* Inviato */
+
+.tri-right.border.left-top:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -40px;
+    top: -8px;
+    bottom: auto;
+    border-color: #D5F9BA transparent transparent transparent;
+}
+
+.tri-right.left-top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -20px;
+    top: 0px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: #D5F9BA transparent transparent transparent;
+}
+
