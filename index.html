@@ -81,19 +81,20 @@
 
                         <!---->
                         
-                        <section class="p-3 d-flex justify-content-between border-bottom contact">
+                        <section v-for="(contact, index) in contacts" @click="activeContactI = index"
+						v-bind:class=" index==activeContactI ? 'active' : '' " class="p-3 d-flex justify-content-between border-bottom contact">
 
                             <!-- icona -->
                             <div class="d-flex align-items-center">
 
                                 <span class="text-center d-inline-block me-3">
-                                    <img src="" alt="">
+                                    <img v-bind:src="contact.avatar" class="rounded-circle" v-bind:alt="contact.name">
                                 </span>
 
                                 <!-- Nome e messaggio -->
                                 <span class="d-inline-block">
 
-                                    Nome contatto
+                                    {{contact.name}}
 
                                     <div class="text-body-tertiary msg">
                                         Messaggio
@@ -125,15 +126,16 @@
 
                             <!-- foto -->
                             <span class="text-center d-inline-block me-3">
-                                <img src="" alt="">
+                                <img :src="contacts[activeContactI].avatar" class="rounded-circle"
+                                    :alt="contacts[activeContactI].name">
                             </span>
 
                             <!-- testo -->
                             <span class="d-inline-block">
                                 <!-- Nome utente sopra chat -->
-                                Nome utente
+                                {{ contacts[activeContactI].name }}
                                 <div class="text-body-tertiary last-msg">
-                                    Data ultimo messaggio
+                                    Ultimo accesso non disponibile
                                 </div>
                             </span>
                         </span>
@@ -162,7 +164,7 @@
                                 <div class="talktext">
 
                                     <div class="d-flex justify-content-between">
-                                        <p> messaggio </p>
+                                        <p> <p> {{msg.message}} </p> </p>
                                         <span class="msgDelete">
                                             <i class="fa-solid fa-chevron-down ms-2 text-body-tertiary h"
                                                 data-bs-toggle="dropdown" aria-expanded="false"></i>
@@ -174,7 +176,7 @@
                                     </div>
 
                                     <p class="h">
-                                       messaggio
+										{{msg.date}}
                                         <i class="fa-solid fa-check"></i>
                                     </p>
                                 </div>
