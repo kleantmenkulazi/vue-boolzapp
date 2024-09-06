@@ -175,6 +175,33 @@ createApp({
             inputMsg: '',
 
         }
+    },
+
+    methods: {
+        send() {
+            if (this.inputMsg.trim() != 0) {
+
+                
+                this.contacts[this.activeContactI].messages.push({
+                    date: this.nowDate(),
+                    message: this.inputMsg,
+                    status: 'sent'
+                });
+
+                
+                this.inputMsg = ''
+
+                
+                setTimeout(() => {
+                    this.contacts[this.activeContactI].messages.push({
+                        date: this.nowDate(),
+                        message: 'Ok (:',
+                        status: 'received'
+                    });
+                }, 1000);
+            }
+        },
     }
+
 
 }).mount('#app')

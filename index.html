@@ -188,13 +188,10 @@
 
                     <!-- input -->
                     <section class="p-2 d-flex align-items-center chat-input">
-                        <i class="fa-regular fa-face m-3 me-4 fs-4"></i>
-
-                        
-
-                        
+                        <i class="fa-regular fa-face-grin-stars m-3 me-4 fs-4"></i>
+						<input v-model="inputMsg" @keyup.enter="send()" type="text" class="form-control">
                         <i v-if="inputMsg == 0" class="fa-solid fa-microphone m-3 ms-4 fs-4"></i>
-                        <i class="invio fa-solid fa-paper-plane m-3 ms-4 fs-4"></i>
+                        <i v-else="inputMsg > 0" @click="send()" class="invio fa-solid fa-paper-plane m-3 ms-4 fs-4"></i>
                     </section>
 
                 </div>
