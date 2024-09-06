@@ -179,11 +179,11 @@ createApp({
 
     methods: {
         send() {
-            if (this.inputMsg.trim() != 0) {
+            if (this.inputMsg.trim() ) {
 
                 
                 this.contacts[this.activeContactI].messages.push({
-                    date: this.nowDate(),
+                    date: "ciao",
                     message: this.inputMsg,
                     status: 'sent'
                 });
