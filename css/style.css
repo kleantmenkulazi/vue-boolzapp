@@ -1,0 +1,136 @@
+/* 
+general
+*/
+
+img {
+    width: 50px;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+/* 
+headers 
+*/
+
+header {
+    height: 70px;
+}
+
+header i {
+    color: #B1B1B1;
+}
+
+/* 
+main 
+*/
+
+main {
+    background: rgb(0, 150, 136);
+    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(219, 219, 211, 1) 15%);
+    height: 100vh;
+}
+
+/* 
+container, 
+righe, 
+colonne 
+*/
+
+.container {
+    background-color: #EAEAEA;
+    height: 95%;
+    width: 90%;
+    overflow: hidden;
+}
+
+.row,
+.col-4,
+.col {
+    height: 100%;
+}
+
+/* 
+notifica 
+*/
+
+.celeste {
+    color: #8fdafc;
+}
+
+.container-notifica {
+    background-color: #8fdafc;
+    height: 80px;
+}
+
+/* 
+ricerca contatto 
+*/
+
+.search-container {
+    height: 60px;
+}
+
+/* 
+lista contatti 
+*/
+
+.contact-container {
+    height: calc(100% - 200px);
+    overflow-y: auto;
+}
+
+.active {
+    background-color: #E9EBEB;
+}
+
+.contact:hover {
+    background-color: #E9EBEB;
+}
+
+.chat .text-body-tertiary {
+    font-size: small;
+}
+
+/* 
+chat 
+*/
+
+.msg {
+    font-size: 0.8rem;
+}
+
+.chat-container {
+    height: calc(100% - 140px);
+    padding: 30px;
+    background-image: url('../img/mine.jpg');
+    overflow-y: auto;
+}
+
+.chat-input {
+    background-color: #f3eeea;
+    height: 70px;
+}
+
+.chat-input>i {
+    color: #6B7376;
+}
+
+.invio:hover {
+    cursor: pointer;
+}
+
+.fa-chevron-down:hover {
+    cursor: pointer;
+}
+
+.talktext:hover {
+    .msgDelete {
+        display: inline-block;
+    }
+}
+
+.msgDelete {
+    display: none;
+}
